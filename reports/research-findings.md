@@ -1,0 +1,1 @@
+The historical report records **16 articles** in the demonstrated Hive table. This verifies the scope of the documented example, not throughput, latency, fault tolerance or production scale. An exposed credential was removed from the current document; old Git history and provider-side validity are separate concerns.

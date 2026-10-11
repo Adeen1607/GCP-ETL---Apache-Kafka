@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>News ETL with Kafka and Hive</title><link rel="stylesheet" href="style.css"></head><body><header><div><p class="meta">Mohammed Adeen Shaik · Research and coursework</p><h1>News ETL with Kafka and Hive</h1><nav><a href="index.html">Overview</a><a href="report.html">Research report</a><a href="notebooks.html">Explained notebooks</a><a href="https://github.com/Adeen1607/GCP-ETL---Apache-Kafka">Source repository</a></nav></div></header><main><h1 id="news-etl-with-kafka-and-hive">News ETL with Kafka and Hive</h1>
+<p><strong>Author:</strong> Mohammed Adeen Shaik<br />
+<strong>Review date:</strong> 11 October 2026</p>
+<h2 id="research-question">Research question</h2>
+<p>How can a small news API extraction travel through a streaming broker into a queryable warehouse?</p>
+<h2 id="data-and-provenance">Data and provenance</h2>
+<p>Original GCP Kafka Project.docx coursework report and embedded screenshots.</p>
+<p>Source materials are linked from the repository README. Input fingerprints are recorded in <a href="evidence.json">the evidence manifest</a> so a reader can identify the exact committed artifacts used in this review.</p>
+<h2 id="method-and-analytical-rationale">Method and analytical rationale</h2>
+<p>The report documents API extraction, Kafka producer and consumer, CSV preparation, HDFS upload and Hive queries. It records 16 loaded articles in the demonstrated query.</p>
+<h2 id="findings-and-interpretation">Findings and interpretation</h2>
+<p>The historical report records <strong>16 articles</strong> in the demonstrated Hive table. This verifies the scope of the documented example, not throughput, latency, fault tolerance or production scale. An exposed credential was removed from the current document; old Git history and provider-side validity are separate concerns.</p>
+<h2 id="limitations">Limitations</h2>
+<p>The 16 records are a historical example, not a throughput benchmark. No executable producer, consumer or infrastructure configuration is committed. Latency, replay behavior and exactly-once guarantees were not measured.</p>
+<h2 id="reproduction">Reproduction</h2>
+<p>Use the setup commands and input contract in the <a href="https://github.com/Adeen1607/GCP-ETL---Apache-Kafka#readme">repository README</a>. Open the <a href="notebooks.html">notebook catalogue</a> for annotated code and saved outputs. Keep raw records and model binaries local; public reports contain aggregate results or source-embedded figures.</p>
+<h2 id="final-visual-results">Final visual results</h2>
+<p>No verified numerical result figure is available in the current evidence. This status is shown explicitly rather than substituting fabricated data.</p><footer>Evidence dates and limitations are documented in the report. Static pages display saved outputs; they do not execute Python, R, Streamlit or API calls.</footer></main></body></html>
