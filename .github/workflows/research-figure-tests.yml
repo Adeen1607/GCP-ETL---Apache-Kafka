@@ -1,0 +1,20 @@
+name: Research figure regression tests
+on:
+  pull_request:
+    paths:
+      - 'scripts/build_research_site.py'
+      - 'tests/test_research_figures.py'
+      - '.github/workflows/research-figure-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
