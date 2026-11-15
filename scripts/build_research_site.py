@@ -85,7 +85,10 @@ def extract_figs(repo,site):
           if data:
             b=base64.b64decode(''.join(data) if isinstance(data,list) else data);items.append((i,b))
       for i,b in items[-3:]:
-        f=site/'figures'/f'{p.stem.replace(" ","_")}-cell-{i+1}.png';f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(b)
+        relative_path = p.relative_to(repo).as_posix()
+        safe_stem = re.sub(r'[^a-zA-Z0-9_-]', '_', p.stem)
+        path_id = hashlib.sha256(relative_path.encode('utf-8')).hexdigest()[:12]
+        f=site/'figures'/f'{safe_stem}-{path_id}-cell-{i+1}.png';f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(b)
         figs.append((f,f'Figure from {p.name}, original code cell {i+1}'))
     return figs
 
